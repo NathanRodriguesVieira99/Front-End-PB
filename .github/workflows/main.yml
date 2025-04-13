@@ -1,27 +1,26 @@
 name: Deploy Workflow
 
 on:
-    push:
-    pull_request:
+  push:
+  pull_request:
 
 jobs:
-    build:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Checkout Repository
-              uses: actions/checkout@v3
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
 
-            - name: NodeJs Setup
-              uses: actions/setup-node@v3
-              with:
-                  node-version: '21.x'
+      - name: NodeJs Setup
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20.x'
+      
+      - name: Install pnpm
+        run: npm install -g pnpm
 
-                  
-            - name: Installing Dependencies
-              run: pnpm install
+      - name: Installing Dependencies
+        run: pnpm install
 
-            - name: Testing Running
-              run: pnpm test --coverage
-           
-
-
+      - name: Run Tests
+        run: pnpm test --coverage
