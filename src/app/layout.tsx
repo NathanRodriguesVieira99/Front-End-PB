@@ -1,14 +1,14 @@
 import type { Metadata } from 'next';
-import { Noto_Sans } from 'next/font/google';
 
 // Styles
 import './globals.css';
 
 // Fonts
-const notoSans = Noto_Sans({
-    subsets: ['latin'],
-    variable: '--font-noto-sans',
-    weight: ['400', '700', '900'],
+import localFont from 'next/font/local';
+
+export const fontMotivaSans = localFont({
+    src: './MotivaSansBold.woff.ttf',
+    variable: '--font-motivaSans',
 });
 
 // metadata
@@ -28,7 +28,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="pt-BR">
-            <body className={`${notoSans.className}`}>
+            <body className={`${fontMotivaSans.variable}`}>
                 <AppProvider>{children}</AppProvider>
             </body>
         </html>

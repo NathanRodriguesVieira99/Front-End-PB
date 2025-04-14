@@ -1,1 +1,6 @@
 @import "tailwindcss";
+
+@theme inline {
+    /*  class para usar essa fonte no tailwindCSS*/
+    --font-main: var(--font-motivaSans)
+}
