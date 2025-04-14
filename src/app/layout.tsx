@@ -7,7 +7,7 @@ import './globals.css';
 // Fonts
 const notoSans = Noto_Sans({
     subsets: ['latin'],
-    variable: '--font-dynalight',
+    variable: '--font-noto-sans',
     weight: ['400', '700', '900'],
 });
 
