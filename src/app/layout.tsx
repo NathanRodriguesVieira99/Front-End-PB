@@ -7,13 +7,13 @@ import './globals.css';
 import localFont from 'next/font/local';
 
 export const fontMotivaSans = localFont({
-    src: './MotivaSansBold.woff.ttf',
+    src: '../../assets/fonts/MotivaSansRegular.woff.ttf',
     variable: '--font-motivaSans',
 });
 
 // metadata
 export const metadata: Metadata = {
-    title: 'Projeto De Bloco (Front-end0',
+    title: 'Projeto De Bloco (Front-end)',
     description: 'Front-end do nosso projeto de bloco',
 };
 
