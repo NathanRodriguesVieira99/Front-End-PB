@@ -1,6 +1,78 @@
 @import "tailwindcss";
 
 @theme inline {
-    /*  class para usar essa fonte no tailwindCSS*/
-    --font-main: var(--font-motivaSans)
+    /*  class para usar essa fonte no tailwindCSS */
+    --font-main: var(--font-motivaSans);
+
+    /* Font Sizes */
+    --text-heading-large: 1.625rem;   /* 26px */
+    --text-heading-medium: 1.375rem; /* 22px */
+    --text-heading-small: 1.125rem;  /* 18px */
+    --text-body-large: 1rem;         /* 16px */
+    --text-body-medium: 0.875rem;    /* 14px */
+    --text-body-small: 0.75rem;      /* 12px */
+
+    /* Font Weights */
+    --font-weight-bold: 700;
+    --font-weight-regular: 400; 
+
+
+   /*  classes das cores para usar no tailwindCSS */
+       
+    /* System Greys */
+     --color-system-lightest: #DCDEDF;
+    --color-system-lighter: #BBBCBF;
+    --color-system-light: #BB929A;
+    --color-system-base: #67707B;
+    --color-system-dark: #3D4450;
+    --color-system-darker: #23262E;
+    --color-system-darkest: #DE141B;
+
+    /* Store Blues */
+    --color-store-lightest: #CCDBE3;
+    --color-store-lighter: #A7BACC;
+    --color-store-light: #7C9EA3;
+    --color-store-base: #46697D;
+    --color-store-dark: #2A475E;
+    --color-store-darker: #1B2838;
+    --color-store-darkest: #000F18;
+
+    /* Gradients */
+    --gradient-store-background: linear-gradient(180deg, var(--color-store-dark) 0%, var(--color-store-darker) 80%);
+    --gradient-library-background: radial-gradient(farthest-corner at 40px 40px, var(--color-system-dark) 0%, var(--color-system-darker) 80%);
+
+    /* Brand Colors */
+    --color-primary: #66C0F4;
+    /* ChalkyBlue */
+    --color-primary-light: #1A9FFF;
+    /* Blue */
+    --color-primary-bright: #00B8FF;
+    /* BlueHi */
+    --color-secondary: #417a9b;
+    /* DustyBlue */
+
+    /* Accent Colors */
+    --color-accent-green: #5ba32b;
+    --color-accent-green-bright: #59BF40;
+    --color-accent-orange: #E35E1C;
+    --color-accent-red: #D94126;
+    --color-accent-red-bright: #EE563B;
+    --color-accent-yellow: #FFC82C;
+
+    /* Text Colors */
+    --color-text-main: #F5F9FB;
+    --color-text-dim: #CCCCCC;
+    --color-text-highlight: #E2E2EB;
+    --color-text-hover: #E3B4BB;
+    --color-text-secondary: #6E6E5B;
+    --color-text-tertiary: #E3B4BB;
+
+    /* Background Colors */
+    --color-bg-light-soft: rgba(235, 246, 255, 0.10);
+    --color-bg-light-medium: rgba(235, 246, 255, 0.30);
+    --color-bg-light-hard: rgba(235, 246, 255, 0.50);
+
+    --color-bg-dark-soft: #0e141b66;
+    --color-bg-dark-medium: #0e141b99;
+    --color-bg-dark-hard: #0e141bcc;
 }
