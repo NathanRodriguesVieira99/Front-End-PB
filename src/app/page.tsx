@@ -1,5 +1,5 @@
-import Cadastro from './(auth)/cadastro/page';
+import Login from './(auth)/login/page';
 
 export default function AuthRedirect() {
-  return <Cadastro />;
+  return <Login />;
 }
