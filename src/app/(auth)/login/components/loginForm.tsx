@@ -12,25 +12,40 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { zodResolver } from '@hookform/resolvers/zod';
-import {
-  newCadastroFormSchema,
-  type NewCadastroFormSchema,
-} from '@/_validators/cadastro-validator';
+import { NewLoginFormSchema, newLoginFormSchema } from '@/_validators/login-validator';
+import { loginUser } from '@/_services/login-services';
 import { useForm } from 'react-hook-form';
+import { useRouter } from 'next/navigation';
+import { useTransition } from 'react';
 import Link from 'next/link';
 
 export function LoginForm() {
-  const form = useForm<NewCadastroFormSchema>({
+  const router = useRouter();
+  const [isPending, startTransition] = useTransition();
+
+  const form = useForm<NewLoginFormSchema>({
     defaultValues: {
-      name: '',
       email: '',
       password: '',
     },
-    resolver: zodResolver(newCadastroFormSchema),
+    resolver: zodResolver(newLoginFormSchema),
   });
 
-  const handleSubmitLogin = async () => {
-    // TODO adicionar logica de login para acessar a página principal
+  const handleSubmitLogin = async (data: NewLoginFormSchema) => {
+    startTransition(async () => {
+      try {
+        const success = await loginUser(data);
+        if (success) {
+          router.push('/home');
+        } else {
+          form.setError('email', { message: 'E-mail ou senha inválidos' });
+          form.setError('password', { message: 'E-mail ou senha inválidos' });
+        }
+      } catch (error) {
+        console.error('Erro no login: ', error);
+        form.setError('root', { message: 'Ocorreu um erro durante o login' });
+      }
+    });
   };
 
   return (
@@ -88,8 +103,8 @@ export function LoginForm() {
               )}
             />
             <div className="flex items-center justify-center">
-              <Button type="submit" className="w-1/2">
-                Entrar
+              <Button disabled={isPending} type="submit" className="w-1/2">
+                {isPending ? 'Entrando' : 'Entrar'}
               </Button>
             </div>
           </form>
