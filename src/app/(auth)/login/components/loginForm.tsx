@@ -34,16 +34,22 @@ export function LoginForm() {
   const handleSubmitLogin = async (data: NewLoginFormSchema) => {
     startTransition(async () => {
       try {
-        const success = await loginUser(data);
+        // chama a função loginUser (passa os dados do form)
+        const { success, message } = await loginUser(data);
+
+        // se o login for bem sucedido redireciona para a home
         if (success) {
           router.push('/home');
         } else {
-          form.setError('email', { message: 'E-mail ou senha inválidos' });
-          form.setError('password', { message: 'E-mail ou senha inválidos' });
+          form.setError('root', {
+            message: message || 'E-mail ou senha inválidos',
+          });
         }
       } catch (error) {
         console.error('Erro no login: ', error);
-        form.setError('root', { message: 'Ocorreu um erro durante o login' });
+        form.setError('root', {
+          message: 'Ocorreu um erro durante o login',
+        });
       }
     });
   };
