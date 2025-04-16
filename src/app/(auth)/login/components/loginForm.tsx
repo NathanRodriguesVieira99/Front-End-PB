@@ -21,16 +21,20 @@ import Link from 'next/link';
 
 export function LoginForm() {
   const router = useRouter();
+  // seta um loading ao logar (chama o estado no button)
   const [isPending, startTransition] = useTransition();
 
+  // passa os parâmetros do formulário e tipa com o schema de login do zod
   const form = useForm<NewLoginFormSchema>({
     defaultValues: {
       email: '',
       password: '',
     },
+    // zodResolver para validar o formulário com base no newLoginFormSchema do zod
     resolver: zodResolver(newLoginFormSchema),
   });
 
+  // função de login tipada  com o schema de login do zod
   const handleSubmitLogin = async (data: NewLoginFormSchema) => {
     startTransition(async () => {
       try {
@@ -46,6 +50,7 @@ export function LoginForm() {
           });
         }
       } catch (error) {
+        // se der erro exibe uma mensagem
         console.error('Erro no login: ', error);
         form.setError('root', {
           message: 'Ocorreu um erro durante o login',
@@ -60,13 +65,16 @@ export function LoginForm() {
         <CardTitle>Login</CardTitle>
         <CardDescription>Faça login com seu email e senha</CardDescription>
       </CardHeader>
-
       <CardContent>
+        {/* pega as props do useForm() na variável form */}
         <Form {...form}>
+          {/* chama a função de login com o submit do react hook form */}
           <form className="space-y-4" onSubmit={form.handleSubmit(handleSubmitLogin)}>
             <FormField
+              // permite que o React Hook Form gerencie o estado e a validação
               control={form.control}
               name="email"
+              // render recebe as propriedades do campo (field) e passa para o input
               render={({ field }) => (
                 <FormItem>
                   <FormLabel htmlFor="email">E-mail</FormLabel>
@@ -85,8 +93,10 @@ export function LoginForm() {
             />
 
             <FormField
+              // permite que o React Hook Form gerencie o estado e a validação
               control={form.control}
               name="password"
+              // render recebe as propriedades do campo (field) e passa para o input
               render={({ field }) => (
                 <FormItem>
                   <FormLabel htmlFor="password">Senha</FormLabel>
@@ -108,6 +118,7 @@ export function LoginForm() {
                 </FormItem>
               )}
             />
+
             <div className="flex items-center justify-center">
               <Button disabled={isPending} type="submit" className="w-1/2">
                 {isPending ? 'Entrando' : 'Entrar'}

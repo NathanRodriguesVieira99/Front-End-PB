@@ -15,26 +15,28 @@ import {
 } from '@/_validators/cadastro-validator';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
+import { useTransition } from 'react';
 import { cadastrarUser } from '@/_services/cadastro-services';
 import Link from 'next/link';
-import { useTransition } from 'react';
 
 export function CadastroForm() {
-  // seta um loading ao cadastrar
+  // seta um loading ao cadastrar (chama o estado no button)
   const [isSaving, startIsSaving] = useTransition();
 
-  // React Hook Form
+  // passa os parâmetros do formulário e tipa com o schema de cadastro do zod
   const form = useForm<NewCadastroFormSchema>({
     defaultValues: {
       name: '',
       email: '',
       password: '',
     },
+    // zodResolver para validar o formulário com base no newCadastroFormSchema do zod
     resolver: zodResolver(newCadastroFormSchema),
   });
 
+  // função de cadastro tipada com o schema de cadastro do zod
   const handleSubmitCadastro = async (data: NewCadastroFormSchema) => {
-    // ao salvar limpa o form e envia pro banco de dados
+    // ao salvar chama a função que envia pro banco de dados e limpa o form
     startIsSaving(async () => {
       await cadastrarUser(data);
       form.reset();
@@ -49,11 +51,16 @@ export function CadastroForm() {
       </CardHeader>
 
       <CardContent>
+        {/* pega as props do useForm() na variável form */}
         <Form {...form}>
+          {' '}
+          {/* chama a função de cadastro com o submit do react hook form */}
           <form className="space-y-4" onSubmit={form.handleSubmit(handleSubmitCadastro)}>
             <FormField
+              // permite que o React Hook Form gerencie o estado e a validação
               control={form.control}
               name="name"
+              // render recebe as propriedades do campo (field) e passa para o input
               render={({ field }) => (
                 <FormItem>
                   <FormLabel htmlFor="name">Nome</FormLabel>
@@ -63,8 +70,9 @@ export function CadastroForm() {
                         id="name"
                         type="text"
                         placeholder="Digite seu nome de usuário"
-                        {...field}
+                        {...field} // Aplica as propriedades do React Hook Form ao input
                       />
+                      {/* verifica se houver erros na validação exibe esse conteúdo */}
                       {form.formState.errors.name && (
                         <p className="text-accent-red text-body-small">
                           {form.formState.errors.name.message}
