@@ -1,6 +1,12 @@
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Form, FormControl, FormField, FormItem, FormLabel } from '@/components/ui/form';
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+} from '@/components/ui/form';
 import {
   Card,
   CardContent,
@@ -55,7 +61,10 @@ export function CadastroForm() {
         <Form {...form}>
           {' '}
           {/* chama a função de cadastro com o submit do react hook form */}
-          <form className="space-y-4" onSubmit={form.handleSubmit(handleSubmitCadastro)}>
+          <form
+            className="space-y-4"
+            onSubmit={form.handleSubmit(handleSubmitCadastro)}
+          >
             <FormField
               // permite que o React Hook Form gerencie o estado e a validação
               control={form.control}
@@ -65,7 +74,7 @@ export function CadastroForm() {
                 <FormItem>
                   <FormLabel htmlFor="name">Nome</FormLabel>
                   <FormControl>
-                    <div className="flex flex-col gap-2 mt-2">
+                    <div className="mt-2 flex flex-col gap-2">
                       <Input
                         id="name"
                         type="text"
@@ -74,7 +83,7 @@ export function CadastroForm() {
                       />
                       {/* verifica se houver erros na validação exibe esse conteúdo */}
                       {form.formState.errors.name && (
-                        <p className="text-accent-red text-body-small">
+                        <p className="text-body-small text-accent-red">
                           {form.formState.errors.name.message}
                         </p>
                       )}
@@ -91,10 +100,15 @@ export function CadastroForm() {
                 <FormItem>
                   <FormLabel htmlFor="email">E-mail</FormLabel>
                   <FormControl>
-                    <div className="flex flex-col gap-2 mt-2">
-                      <Input id="email" placeholder="Digite seu e-mail" type="email" {...field} />
+                    <div className="mt-2 flex flex-col gap-2">
+                      <Input
+                        id="email"
+                        placeholder="Digite seu e-mail"
+                        type="email"
+                        {...field}
+                      />
                       {form.formState.errors.email && (
-                        <p className="text-accent-red text-body-small">
+                        <p className="text-body-small text-accent-red">
                           {form.formState.errors.email.message}
                         </p>
                       )}
@@ -111,7 +125,7 @@ export function CadastroForm() {
                 <FormItem>
                   <FormLabel htmlFor="password">Senha</FormLabel>
                   <FormControl>
-                    <div className="flex  flex-col gap-2 mt-2">
+                    <div className="mt-2 flex flex-col gap-2">
                       <Input
                         type="password"
                         placeholder="Digite sua senha"
@@ -119,7 +133,7 @@ export function CadastroForm() {
                         {...field}
                       />
                       {form.formState.errors.password && (
-                        <p className="text-accent-red text-body-small">
+                        <p className="text-body-small text-accent-red">
                           {form.formState.errors.password.message}
                         </p>
                       )}

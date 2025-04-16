@@ -1,7 +1,13 @@
 'use client';
 
 import { Button } from '@/components/ui/button';
-import { Form, FormControl, FormField, FormItem, FormLabel } from '@/components/ui/form';
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+} from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import {
   Card,
@@ -12,7 +18,10 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { NewLoginFormSchema, newLoginFormSchema } from '@/_validators/login-validator';
+import {
+  NewLoginFormSchema,
+  newLoginFormSchema,
+} from '@/_validators/login-validator';
 import { loginUser } from '@/_services/login-services';
 import { useForm } from 'react-hook-form';
 import { useRouter } from 'next/navigation';
@@ -69,7 +78,10 @@ export function LoginForm() {
         {/* pega as props do useForm() na variável form */}
         <Form {...form}>
           {/* chama a função de login com o submit do react hook form */}
-          <form className="space-y-4" onSubmit={form.handleSubmit(handleSubmitLogin)}>
+          <form
+            className="space-y-4"
+            onSubmit={form.handleSubmit(handleSubmitLogin)}
+          >
             <FormField
               // permite que o React Hook Form gerencie o estado e a validação
               control={form.control}
@@ -79,10 +91,15 @@ export function LoginForm() {
                 <FormItem>
                   <FormLabel htmlFor="email">E-mail</FormLabel>
                   <FormControl>
-                    <div className="flex flex-col gap-2 mt-2">
-                      <Input id="email" placeholder="Digite seu e-mail" type="email" {...field} />
+                    <div className="mt-2 flex flex-col gap-2">
+                      <Input
+                        id="email"
+                        placeholder="Digite seu e-mail"
+                        type="email"
+                        {...field}
+                      />
                       {form.formState.errors.email && (
-                        <p className="text-accent-red text-body-small">
+                        <p className="text-body-small text-accent-red">
                           {form.formState.errors.email.message}
                         </p>
                       )}
@@ -101,7 +118,7 @@ export function LoginForm() {
                 <FormItem>
                   <FormLabel htmlFor="password">Senha</FormLabel>
                   <FormControl>
-                    <div className="flex  flex-col gap-2 mt-2">
+                    <div className="mt-2 flex flex-col gap-2">
                       <Input
                         type="password"
                         placeholder="Digite sua senha"
@@ -109,7 +126,7 @@ export function LoginForm() {
                         {...field}
                       />
                       {form.formState.errors.password && (
-                        <p className="text-accent-red text-body-small">
+                        <p className="text-body-small text-accent-red">
                           {form.formState.errors.password.message}
                         </p>
                       )}
@@ -131,7 +148,7 @@ export function LoginForm() {
       <CardFooter>
         <CardDescription>
           Não tem uma conta?{' '}
-          <Link className="text-text-highlight " href="/cadastro">
+          <Link className="text-text-highlight" href="/cadastro">
             {' '}
             Cadastre-se
           </Link>

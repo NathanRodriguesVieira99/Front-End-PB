@@ -1,5 +1,5 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
 /*  ---break--- */
 @custom-variant dark (&:is(.dark *));
 
@@ -28,59 +28,65 @@
   /*  classes das cores para usar no tailwindCSS */
 
   /* System Greys */
-  --color-system-lightest: #DCDEDF;
-  --color-system-lighter: #BBBCBF;
-  --color-system-light: #BB929A;
-  --color-system-base: #67707B;
-  --color-system-dark: #3D4450;
-  --color-system-darker: #23262E;
-  --color-system-darkest: #DE141B;
+  --color-system-lightest: #dcdedf;
+  --color-system-lighter: #bbbcbf;
+  --color-system-light: #bb929a;
+  --color-system-base: #67707b;
+  --color-system-dark: #3d4450;
+  --color-system-darker: #23262e;
+  --color-system-darkest: #de141b;
 
   /* Store Blues */
-  --color-store-lightest: #CCDBE3;
-  --color-store-lighter: #A7BACC;
-  --color-store-light: #7C9EA3;
-  --color-store-base: #46697D;
-  --color-store-dark: #2A475E;
-  --color-store-darker: #1B2838;
-  --color-store-darkest: #000F18;
+  --color-store-lightest: #ccdbe3;
+  --color-store-lighter: #a7bacc;
+  --color-store-light: #7c9ea3;
+  --color-store-base: #46697d;
+  --color-store-dark: #2a475e;
+  --color-store-darker: #1b2838;
+  --color-store-darkest: #000f18;
 
   /* Gradients */
-  --gradient-store-background: linear-gradient(180deg, var(--color-store-dark) 0%, var(--color-store-darker) 80%);
-  --gradient-library-background: radial-gradient(farthest-corner at 40px 40px, var(--color-system-dark) 0%, var(--color-system-darker) 80%);
+  --gradient-store-background: linear-gradient(
+    180deg,
+    var(--color-store-dark) 0%,
+    var(--color-store-darker) 80%
+  );
+  --gradient-library-background: radial-gradient(
+    farthest-corner at 40px 40px,
+    var(--color-system-dark) 0%,
+    var(--color-system-darker) 80%
+  );
 
   /* Brand Colors */
-  --color-primary: #66C0F4;
+  --color-primary: #66c0f4;
   /* ChalkyBlue */
-  --color-primary-light: #1A9FFF;
+  --color-primary-light: #1a9fff;
   /* Blue */
-  --color-primary-bright: #00B8FF;
+  --color-primary-bright: #00b8ff;
   /* BlueHi */
   --color-secondary: #417a9b;
   /* DustyBlue */
 
   /* Accent Colors */
   --color-accent-green: #5ba32b;
-  --color-accent-green-bright: #59BF40;
-  --color-accent-orange: #E35E1C;
-  --color-accent-red: #D94126;
-  --color-accent-red-bright: #EE563B;
-  --color-accent-yellow: #FFC82C;
+  --color-accent-green-bright: #59bf40;
+  --color-accent-orange: #e35e1c;
+  --color-accent-red: #d94126;
+  --color-accent-red-bright: #ee563b;
+  --color-accent-yellow: #ffc82c;
 
   /* Text Colors */
-  --color-text-main: #F5F9FB;
-  --color-text-dim: #CCCCCC;
-  --color-text-highlight: #E2E2EB;
-  --color-text-hover: #E3B4BB;
-  --color-text-secondary: #6E6E5B;
-  --color-text-tertiary: #E3B4BB;
+  --color-text-main: #f5f9fb;
+  --color-text-dim: #cccccc;
+  --color-text-highlight: #e2e2eb;
+  --color-text-hover: #e3b4bb;
+  --color-text-secondary: #6e6e5b;
+  --color-text-tertiary: #e3b4bb;
 
   /* Background Colors */
-  --color-bg-light-soft: rgba(235, 246, 255, 0.10);
-  --color-bg-light-medium: rgba(235, 246, 255, 0.30);
-  --color-bg-light-hard: rgba(235, 246, 255, 0.50);
-
-
+  --color-bg-light-soft: rgba(235, 246, 255, 0.1);
+  --color-bg-light-medium: rgba(235, 246, 255, 0.3);
+  --color-bg-light-hard: rgba(235, 246, 255, 0.5);
 
   /* shadcn */
   --color-bg-dark-soft: #0e141b66;
@@ -157,7 +163,6 @@
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
 }
-
 
 /*  ---break--- */
 
