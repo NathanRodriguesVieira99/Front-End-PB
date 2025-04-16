@@ -1,10 +1,9 @@
 import { z } from 'zod';
 
-// zod
-
 // tipagem para a validação
 export type NewCadastroFormSchema = z.infer<typeof newCadastroFormSchema>;
 
+// cria uma validação para o cadastro
 export const newCadastroFormSchema = z.object({
   name: z.string().min(1, { message: 'Nome é obrigatório' }),
   email: z.string().email({ message: 'E-mail inválido' }),

@@ -1,7 +1,9 @@
 import { z } from 'zod';
 
+// tipagem para a validação
 export type NewLoginFormSchema = z.infer<typeof newLoginFormSchema>;
 
+// cria uma validação para o login
 export const newLoginFormSchema = z.object({
   email: z.string().email('E-mail inválido'),
   password: z
