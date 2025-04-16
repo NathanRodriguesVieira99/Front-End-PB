@@ -1,5 +1,3 @@
-import type { Metadata } from 'next';
-
 // Styles
 import './globals.css';
 
@@ -12,6 +10,7 @@ export const fontMotivaSans = localFont({
 });
 
 // metadata
+import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Projeto De Bloco (Front-end)',
   description: 'Front-end do nosso projeto de bloco',
