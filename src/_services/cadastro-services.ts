@@ -4,6 +4,8 @@
 import { hashSync } from 'bcrypt-ts';
 
 import { PrismaClient } from '@prisma/client';
+
+// importa o schema de validação do zod
 import {
   newCadastroFormSchema,
   type NewCadastroFormSchema,
@@ -11,8 +13,10 @@ import {
 
 // valida no back-end o user cadastrado
 export async function cadastrarUser(data: NewCadastroFormSchema) {
+  // valida os dados recebidos usando newCadastroFormSchema
   const parsedData = newCadastroFormSchema.safeParse(data);
 
+  // se a validação falhar da erro
   if (!parsedData.success) {
     return { error: parsedData.error.message };
   }
@@ -24,7 +28,7 @@ export async function cadastrarUser(data: NewCadastroFormSchema) {
     data: {
       name: parsedData.data.name,
       email: parsedData.data.email,
-      password: hashSync(parsedData.data.password),
+      password: hashSync(parsedData.data.password), // criptografa a senha
     },
   });
 }
