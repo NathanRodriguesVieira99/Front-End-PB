@@ -69,10 +69,14 @@ export function LoginForm() {
   };
 
   return (
-    <Card className="w-full max-w-sm border-0 bg-store-darkest">
+    <Card className="m-4 w-full max-w-sm border-0 bg-store-darkest shadow-xl/20 sm:m-4">
       <CardHeader>
-        <CardTitle className="text-text-main">Login</CardTitle>
-        <CardDescription>Faça login com seu email e senha</CardDescription>
+        <CardTitle className="text-xl text-text-main sm:text-2xl">
+          Login
+        </CardTitle>
+        <CardDescription className="md:text-md text-sm sm:text-base">
+          Faça login com seu email e senha
+        </CardDescription>
       </CardHeader>
       <CardContent>
         {/* pega as props do useForm() na variável form */}
@@ -89,7 +93,10 @@ export function LoginForm() {
               // render recebe as propriedades do campo (field) e passa para o input
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel htmlFor="email" className="text-text-main">
+                  <FormLabel
+                    htmlFor="email"
+                    className="md:text-md text-sm text-text-main sm:text-base"
+                  >
                     E-mail
                   </FormLabel>
                   <FormControl>
@@ -119,7 +126,10 @@ export function LoginForm() {
               // render recebe as propriedades do campo (field) e passa para o input
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel htmlFor="password" className="text-text-main">
+                  <FormLabel
+                    htmlFor="password"
+                    className="md:text-md text-sm text-text-main sm:text-base"
+                  >
                     Senha
                   </FormLabel>
                   <FormControl>
