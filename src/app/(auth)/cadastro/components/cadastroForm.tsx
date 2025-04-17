@@ -50,10 +50,14 @@ export function CadastroForm() {
   };
 
   return (
-    <Card className="w-full max-w-sm border-0 bg-store-darkest">
+    <Card className="m-4 w-full max-w-sm border-0 bg-store-darkest shadow-xl/20 sm:m-4">
       <CardHeader>
-        <CardTitle className="text-text-main">Cadastro</CardTitle>
-        <CardDescription>Crie a sua conta</CardDescription>
+        <CardTitle className="text-xl text-text-main sm:text-2xl">
+          Cadastro
+        </CardTitle>
+        <CardDescription className="md:text-md text-sm sm:text-base">
+          Crie a sua conta
+        </CardDescription>
       </CardHeader>
 
       <CardContent>
@@ -72,7 +76,10 @@ export function CadastroForm() {
               // render recebe as propriedades do campo (field) e passa para o input
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel htmlFor="name" className="text-text-main">
+                  <FormLabel
+                    htmlFor="name"
+                    className="md:text-md text-sm text-text-main sm:text-base"
+                  >
                     Nome
                   </FormLabel>
                   <FormControl>
@@ -101,7 +108,10 @@ export function CadastroForm() {
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel htmlFor="email" className="text-text-main">
+                  <FormLabel
+                    htmlFor="email"
+                    className="md:text-md text-sm text-text-main sm:text-base"
+                  >
                     E-mail
                   </FormLabel>
                   <FormControl>
@@ -129,7 +139,10 @@ export function CadastroForm() {
               name="password"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel htmlFor="password" className="text-text-main">
+                  <FormLabel
+                    htmlFor="password"
+                    className="md:text-md text-sm text-text-main sm:text-base"
+                  >
                     Senha
                   </FormLabel>
                   <FormControl>
