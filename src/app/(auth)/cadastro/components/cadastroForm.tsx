@@ -50,9 +50,9 @@ export function CadastroForm() {
   };
 
   return (
-    <Card className="w-full max-w-sm">
+    <Card className="w-full max-w-sm border-0 bg-store-darkest">
       <CardHeader>
-        <CardTitle>Cadastro</CardTitle>
+        <CardTitle className="text-text-main">Cadastro</CardTitle>
         <CardDescription>Crie a sua conta</CardDescription>
       </CardHeader>
 
@@ -72,10 +72,13 @@ export function CadastroForm() {
               // render recebe as propriedades do campo (field) e passa para o input
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel htmlFor="name">Nome</FormLabel>
+                  <FormLabel htmlFor="name" className="text-text-main">
+                    Nome
+                  </FormLabel>
                   <FormControl>
                     <div className="mt-2 flex flex-col gap-2">
                       <Input
+                        className="focus-visible:border-store-base focus-visible:ring-store-base"
                         id="name"
                         type="text"
                         placeholder="Digite seu nome de usuário"
@@ -98,10 +101,13 @@ export function CadastroForm() {
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel htmlFor="email">E-mail</FormLabel>
+                  <FormLabel htmlFor="email" className="text-text-main">
+                    E-mail
+                  </FormLabel>
                   <FormControl>
                     <div className="mt-2 flex flex-col gap-2">
                       <Input
+                        className="focus-visible:border-store-base focus-visible:ring-store-base"
                         id="email"
                         placeholder="Digite seu e-mail"
                         type="email"
@@ -123,10 +129,13 @@ export function CadastroForm() {
               name="password"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel htmlFor="password">Senha</FormLabel>
+                  <FormLabel htmlFor="password" className="text-text-main">
+                    Senha
+                  </FormLabel>
                   <FormControl>
                     <div className="mt-2 flex flex-col gap-2">
                       <Input
+                        className="focus-visible:border-store-base focus-visible:ring-store-base"
                         type="password"
                         placeholder="Digite sua senha"
                         id="password"
@@ -145,8 +154,16 @@ export function CadastroForm() {
 
             <div className="flex items-center justify-center">
               {/* enquanto está salvando mostra um 'Carregando'*/}
-              <Button type="submit" className="w-1/2" disabled={isSaving}>
-                {isSaving ? 'Cadastrando...' : 'Cadastrar'}
+              <Button
+                type="submit"
+                className="w-1/2 bg-store-base hover:bg-store-dark"
+                disabled={isSaving}
+              >
+                {isSaving ? (
+                  <p className="text-text-main">Cadastrando...</p>
+                ) : (
+                  <p className="text-text-main"> Cadastrar</p>
+                )}
               </Button>
             </div>
           </form>
