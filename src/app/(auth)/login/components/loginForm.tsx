@@ -69,9 +69,9 @@ export function LoginForm() {
   };
 
   return (
-    <Card className="w-full max-w-sm">
+    <Card className="w-full max-w-sm border-0 bg-store-darkest">
       <CardHeader>
-        <CardTitle>Login</CardTitle>
+        <CardTitle className="text-text-main">Login</CardTitle>
         <CardDescription>Faça login com seu email e senha</CardDescription>
       </CardHeader>
       <CardContent>
@@ -89,10 +89,13 @@ export function LoginForm() {
               // render recebe as propriedades do campo (field) e passa para o input
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel htmlFor="email">E-mail</FormLabel>
+                  <FormLabel htmlFor="email" className="text-text-main">
+                    E-mail
+                  </FormLabel>
                   <FormControl>
                     <div className="mt-2 flex flex-col gap-2">
                       <Input
+                        className="focus-visible:border-store-base focus-visible:ring-store-base"
                         id="email"
                         placeholder="Digite seu e-mail"
                         type="email"
@@ -116,10 +119,13 @@ export function LoginForm() {
               // render recebe as propriedades do campo (field) e passa para o input
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel htmlFor="password">Senha</FormLabel>
+                  <FormLabel htmlFor="password" className="text-text-main">
+                    Senha
+                  </FormLabel>
                   <FormControl>
                     <div className="mt-2 flex flex-col gap-2">
                       <Input
+                        className="focus-visible:border-store-base focus-visible:ring-store-base"
                         type="password"
                         placeholder="Digite sua senha"
                         id="password"
@@ -137,8 +143,16 @@ export function LoginForm() {
             />
 
             <div className="flex items-center justify-center">
-              <Button disabled={isPending} type="submit" className="w-1/2">
-                {isPending ? 'Entrando' : 'Entrar'}
+              <Button
+                disabled={isPending}
+                type="submit"
+                className="w-1/2 bg-store-base hover:bg-store-dark"
+              >
+                {isPending ? (
+                  <p className="text-text-main">Entrando...</p>
+                ) : (
+                  <p className="text-text-main"> Entrar</p>
+                )}
               </Button>
             </div>
           </form>
