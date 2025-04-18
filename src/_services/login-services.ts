@@ -1,6 +1,6 @@
 'use server';
 
-import { prisma } from '@/lib/prisma';
+import { prisma } from '@/_lib/prisma';
 import { compare } from 'bcrypt-ts';
 
 // função para login
