@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 };
 
 // Providers
-import { AppProvider } from '@/contexts/appProvider';
+import { AppProvider } from '@/_contexts/appProvider';
 
 // Root Layout
 export default function RootLayout({
