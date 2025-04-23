@@ -28,7 +28,7 @@ import { useRouter } from 'next/navigation';
 import { useTransition } from 'react';
 import Link from 'next/link';
 
-export function LoginForm() {
+export default function LoginForm() {
   const router = useRouter();
   // seta um loading ao logar (chama o estado no button)
   const [isPending, startTransition] = useTransition();
@@ -102,7 +102,7 @@ export function LoginForm() {
                   <FormControl>
                     <div className="mt-2 flex flex-col gap-2">
                       <Input
-                        className="focus-visible:border-store-base focus-visible:ring-store-base"
+                        className="text-text-main focus-visible:border-store-base focus-visible:ring-store-base"
                         id="email"
                         placeholder="Digite seu e-mail"
                         type="email"
@@ -135,7 +135,7 @@ export function LoginForm() {
                   <FormControl>
                     <div className="mt-2 flex flex-col gap-2">
                       <Input
-                        className="focus-visible:border-store-base focus-visible:ring-store-base"
+                        className="text-text-main focus-visible:border-store-base focus-visible:ring-store-base"
                         type="password"
                         placeholder="Digite sua senha"
                         id="password"

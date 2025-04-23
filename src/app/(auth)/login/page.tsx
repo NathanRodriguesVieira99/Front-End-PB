@@ -1,11 +1,19 @@
 'use client';
+import { Suspense, lazy } from 'react';
 
-import { LoginForm } from './components/loginForm';
-
+const LoginForm = lazy(() => import('./components/loginForm'));
 export default function Login() {
   return (
     <div className="flex h-screen w-full items-center justify-center bg-store-darker font-main">
-      <LoginForm />
+      <Suspense
+        fallback={
+          <div>
+            <p>loading...(provisório)</p>
+          </div>
+        }
+      >
+        <LoginForm />
+      </Suspense>
     </div>
   );
 }
