@@ -5,7 +5,7 @@
 
 @theme inline {
   /*  class para usar essa fonte no tailwindCSS */
-  --font-main: var(--font-motivaSans);
+  --font-main: var(--font-monaSans);
 
   /* Font Sizes */
   --text-heading-large: 1.625rem;

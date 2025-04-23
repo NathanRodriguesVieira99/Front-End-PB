@@ -2,11 +2,10 @@
 import './globals.css';
 
 // Fonts
-import localFont from 'next/font/local';
+import { Mona_Sans } from 'next/font/google';
 
-export const fontMotivaSans = localFont({
-  src: '../../assets/fonts/MotivaSansRegular.woff.ttf',
-  variable: '--font-motivaSans',
+const monaSans = Mona_Sans({
+  subsets: ['latin'],
 });
 
 // metadata
@@ -14,6 +13,9 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Projeto De Bloco (Front-end)',
   description: 'Front-end do nosso projeto de bloco',
+  icons: {
+    icon: '/icon.webp',
+  },
 };
 
 // Providers
@@ -27,7 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" suppressHydrationWarning>
-      <body className={`${fontMotivaSans.variable}`}>
+      <body className={`${monaSans.className}`}>
         <AppProvider>{children}</AppProvider>
       </body>
     </html>
