@@ -13,7 +13,9 @@
     "test:watch": "jest --watch --maxWorkers=25%",
     "test:staged": "jest --findRelatedTests --passWithNoTests",
     "test:push": "jest --coverage --passWithNoTests",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.0.1",
