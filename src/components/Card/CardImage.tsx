@@ -7,7 +7,7 @@ interface CardImageProps {
 
 export const CardImage = ({ src, alt }: CardImageProps) => {
   return (
-    <div className="relative aspect-[379/197] w-full overflow-hidden">
+    <div className="relative flex aspect-[379/197] w-full items-center justify-center overflow-hidden">
       <Image
         src={src}
         alt={alt}
