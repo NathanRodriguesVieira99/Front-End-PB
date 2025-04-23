@@ -1,5 +1,16 @@
-import Cadastro from './(auth)/cadastro/page';
+import { Suspense, lazy } from 'react';
+const Cadastro = lazy(() => import('./(auth)/cadastro/page'));
 
 export default function AuthRedirect() {
-  return <Cadastro />;
+  return (
+    <Suspense
+      fallback={
+        <div>
+          <p>loading...(provisório)</p>
+        </div>
+      }
+    >
+      <Cadastro />
+    </Suspense>
+  );
 }

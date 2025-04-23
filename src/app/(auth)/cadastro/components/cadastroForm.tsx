@@ -25,7 +25,7 @@ import { useTransition } from 'react';
 import { cadastrarUser } from '@/_services/cadastro-services';
 import Link from 'next/link';
 
-export function CadastroForm() {
+export default function CadastroForm() {
   // seta um loading ao cadastrar (chama o estado no button)
   const [isSaving, startIsSaving] = useTransition();
 
@@ -85,7 +85,7 @@ export function CadastroForm() {
                   <FormControl>
                     <div className="mt-2 flex flex-col gap-2">
                       <Input
-                        className="focus-visible:border-store-base focus-visible:ring-store-base"
+                        className="text-text-main focus-visible:border-store-base focus-visible:ring-store-base"
                         id="name"
                         type="text"
                         placeholder="Digite seu nome de usuário"
@@ -117,7 +117,7 @@ export function CadastroForm() {
                   <FormControl>
                     <div className="mt-2 flex flex-col gap-2">
                       <Input
-                        className="focus-visible:border-store-base focus-visible:ring-store-base"
+                        className="text-text-main focus-visible:border-store-base focus-visible:ring-store-base"
                         id="email"
                         placeholder="Digite seu e-mail"
                         type="email"
@@ -148,7 +148,7 @@ export function CadastroForm() {
                   <FormControl>
                     <div className="mt-2 flex flex-col gap-2">
                       <Input
-                        className="focus-visible:border-store-base focus-visible:ring-store-base"
+                        className="text-text-main focus-visible:border-store-base focus-visible:ring-store-base"
                         type="password"
                         placeholder="Digite sua senha"
                         id="password"
