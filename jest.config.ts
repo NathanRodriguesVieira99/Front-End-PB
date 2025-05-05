@@ -11,11 +11,16 @@ const config: Config = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
+    '^@tests/(.*)$': '<rootDir>/src/_tests/$1',
   },
 
   testEnvironmentOptions: {
     customExportConditions: [''],
   },
+
+  // Configurações de performance
+  workerIdleMemoryLimit: '512MB',
+  maxWorkers: '80%',
 };
 
 export default createJestConfig(config);
