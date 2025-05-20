@@ -21,6 +21,11 @@ export const metadata: Metadata = {
 // Providers
 import { AppProvider } from '@/_contexts/appProvider';
 
+// MSW
+if (process.env.NEXT_PUBLIC_API_MOCKING === 'enabled') {
+  require('@/_tests/mocks/msw/index');
+}
+
 // Root Layout
 export default function RootLayout({
   children,
