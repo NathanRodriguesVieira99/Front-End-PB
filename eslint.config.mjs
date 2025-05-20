@@ -1,6 +1,5 @@
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
-
 import { FlatCompat } from '@eslint/eslintrc';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -13,13 +12,11 @@ const compat = new FlatCompat({
 const eslintConfig = [
   ...compat.extends(
     'next/core-web-vitals',
-    'next/typescript',
     'plugin:import/recommended',
     'plugin:import/typescript'
   ),
   {
     rules: {
-      '@typescript-eslint/no-require-imports': 'off',
       'import/order': [
         'error',
         {
@@ -30,6 +27,7 @@ const eslintConfig = [
             'parent',
             'sibling',
             'index',
+            'object',
           ],
           pathGroups: [
             {
@@ -38,19 +36,19 @@ const eslintConfig = [
             },
           ],
           'newlines-between': 'always',
-          alphabetize: { order: 'asc', caseInsensitive: true },
+          alphabetize: {
+            order: 'asc',
+            caseInsensitive: true,
+          },
         },
       ],
-      'import/first': 'error',
-      'import/no-duplicates': 'error',
+      '@typescript-eslint/no-require-imports': 'off',
     },
-
     settings: {
       'import/resolver': {
         typescript: true,
         node: true,
       },
-      'import/extensions': ['.js', '.jsx', '.ts', '.tsx'],
     },
   },
 ];
