@@ -81,24 +81,22 @@ export function CarouselSize() {
       <CarouselContent className="w-full">
         {cards.map((card) => (
           <CarouselItem key={card.id} className="md:basis-1/2 lg:basis-1/3">
-            <div className="p-1">
-              <Card.Root>
-                <Card.Image alt={card.alt} src={card.src} />
+            <Card.Root>
+              <Card.Image alt={card.alt} src={card.src} />
 
-                <Card.Header>
-                  <Card.Title title={card.title} />
-                </Card.Header>
+              <Card.Header>
+                <Card.Title title={card.title} />
+              </Card.Header>
 
-                <Card.Content>
-                  <Card.Price price={card.price} />
-                </Card.Content>
+              <Card.Content>
+                <Card.Price price={card.price} />
+              </Card.Content>
 
-                <Card.Footer>
-                  <Card.FooterItem text={card.producedBy} />
-                  <Card.FooterItem text={card.releaseDate} />
-                </Card.Footer>
-              </Card.Root>
-            </div>
+              <Card.Footer>
+                <Card.FooterItem text={card.producedBy} />
+                <Card.FooterItem text={card.releaseDate} />
+              </Card.Footer>
+            </Card.Root>
           </CarouselItem>
         ))}
       </CarouselContent>
