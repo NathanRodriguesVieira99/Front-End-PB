@@ -2,14 +2,17 @@
 import './globals.css';
 
 // Fonts
+import type { Metadata } from 'next';
 import { Mona_Sans } from 'next/font/google';
+
+// metadata
+
+// Providers
+import { AppProvider } from '@/_contexts/appProvider';
 
 const monaSans = Mona_Sans({
   subsets: ['latin'],
 });
-
-// metadata
-import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Projeto De Bloco (Front-end)',
   description: 'Front-end do nosso projeto de bloco',
@@ -18,12 +21,9 @@ export const metadata: Metadata = {
   },
 };
 
-// Providers
-import { AppProvider } from '@/_contexts/appProvider';
-
 // MSW
 if (process.env.NEXT_PUBLIC_API_MOCKING === 'enabled') {
-  require('@/_tests/mocks/msw/index');
+  require('@/_lib/msw/setup');
 }
 
 // Root Layout
