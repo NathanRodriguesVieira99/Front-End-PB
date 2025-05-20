@@ -7,11 +7,14 @@ const createJestConfig = nextJest({
 
 const config: Config = {
   coverageProvider: 'v8',
-  testEnvironment: '@happy-dom/jest-environment',
+  testEnvironment: 'jest-fixed-jsdom',
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
     '^@tests/(.*)$': '<rootDir>/src/_tests/$1',
+  },
+  transform: {
+    '^.+\\.tsx?$': '@swc/jest',
   },
 
   testEnvironmentOptions: {
