@@ -1,11 +1,11 @@
-import { CardRoot } from './CardRoot';
-import { CardContent } from './CardContent';
-import { CardTitle } from './CardTitle';
-import { CardImage } from './CardImage';
 import { CardActions } from './CardActions';
 import { CardBuyButton } from './CardBuyButton';
-import { CardPrice } from './CardPrice';
+import { CardContent } from './CardContent';
 import { CardDescription } from './CardDescription';
+import { CardImage } from './CardImage';
+import { CardPrice } from './CardPrice';
+import { CardRoot } from './CardRoot';
+import { CardTitle } from './CardTitle';
 
 export const Card = {
   Root: CardRoot,
@@ -17,3 +17,5 @@ export const Card = {
   BuyButton: CardBuyButton,
   Price: CardPrice,
 };
+
+// TODO adicionar tailwind merge em todos os subcomponentes de Card
