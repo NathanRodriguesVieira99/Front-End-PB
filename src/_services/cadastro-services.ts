@@ -1,9 +1,8 @@
 'use server';
 
 // criptografa a senha
-import { hashSync } from 'bcrypt-ts';
-
 import { PrismaClient } from '@prisma/client';
+import { hashSync } from 'bcrypt-ts';
 
 // importa o schema de validação do zod
 import {

@@ -1,12 +1,14 @@
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
+import { zodResolver } from '@hookform/resolvers/zod';
+import Link from 'next/link';
+import { useTransition } from 'react';
+import { useForm } from 'react-hook-form';
+
+import { cadastrarUser } from '@/_services/cadastro-services';
 import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-} from '@/components/ui/form';
+  newCadastroFormSchema,
+  type NewCadastroFormSchema,
+} from '@/_validators/cadastro-validator';
+import { Button } from '@/components/ui/button';
 import {
   Card,
   CardContent,
@@ -16,14 +18,13 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import {
-  newCadastroFormSchema,
-  type NewCadastroFormSchema,
-} from '@/_validators/cadastro-validator';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { useForm } from 'react-hook-form';
-import { useTransition } from 'react';
-import { cadastrarUser } from '@/_services/cadastro-services';
-import Link from 'next/link';
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+} from '@/components/ui/form';
+import { Input } from '@/components/ui/input';
 
 export default function CadastroForm() {
   // seta um loading ao cadastrar (chama o estado no button)

@@ -1,7 +1,8 @@
 'use server';
 
-import { prisma } from '@/_lib/prisma';
 import { compare } from 'bcrypt-ts';
+
+import { prisma } from '@/_lib/prisma';
 
 // função para login
 export async function loginUser(data: { email: string; password: string }) {
