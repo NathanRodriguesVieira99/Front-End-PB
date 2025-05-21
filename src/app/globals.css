@@ -45,6 +45,14 @@
   --color-store-darker: #1b2838;
   --color-store-darkest: #000f18;
 
+  /* Backgrounds */
+  --color-bg-light-softer: #6998bb24;
+  --color-bg-light-soft: #3b5a7280;
+  --color-bg-light-medium: #678BA670;
+  --color-bg-light-hard: #938D8480;
+  --color-bg-light-harder: #aacce6a6;
+
+
   /* Gradients */
   --gradient-store-background: linear-gradient(180deg,
       var(--color-store-dark) 0%,
