@@ -76,12 +76,12 @@ export function CarouselSize() {
         loop: true,
         dragFree: false,
       }}
-      className="w-[90%]"
+      className="mt-8 w-[90%]"
     >
-      <CarouselContent className="w-full">
+      <CarouselContent className="flex w-full">
         {cards.map((card) => (
-          <CarouselItem key={card.id} className="md:basis-1/2 lg:basis-1/3">
-            <Card.Root>
+          <CarouselItem key={card.id} className="m-4 md:basis-1/2 lg:basis-1/3">
+            <Card.Root className="">
               <Card.Image alt={card.alt} src={card.src} />
 
               <Card.Header>
