@@ -14,11 +14,10 @@ import { CarouselSize } from '@/components/Carousel/Carousel';
 
 export default function Home() {
   return (
-    <>
-      <h1>FUTURA HOME PAGE</h1>
+    <main className="h-screen bg-[linear-gradient(180deg,var(--color-store-dark)_0%,var(--color-store-darker)_80%)]">
       <div className="flex items-center justify-center">
         <CarouselSize />
       </div>
-    </>
+    </main>
   );
 }
