@@ -3,11 +3,6 @@ import Link from 'next/link';
 import { useTransition } from 'react';
 import { useForm } from 'react-hook-form';
 
-import { cadastrarUser } from '@/_services/cadastro-services';
-import {
-  newCadastroFormSchema,
-  type NewCadastroFormSchema,
-} from '@/_validators/cadastro-validator';
 import { Button } from '@/components/ui/button';
 import {
   Card,
@@ -25,6 +20,11 @@ import {
   FormLabel,
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
+import { cadastrarUser } from '@/services/cadastro-services';
+import {
+  newCadastroFormSchema,
+  type NewCadastroFormSchema,
+} from '@/validators/cadastro-validator';
 
 export default function CadastroForm() {
   // seta um loading ao cadastrar (chama o estado no button)

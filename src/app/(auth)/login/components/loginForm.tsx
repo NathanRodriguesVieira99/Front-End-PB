@@ -6,11 +6,6 @@ import { useRouter } from 'next/navigation';
 import { useTransition } from 'react';
 import { useForm } from 'react-hook-form';
 
-import { loginUser } from '@/_services/login-services';
-import {
-  NewLoginFormSchema,
-  newLoginFormSchema,
-} from '@/_validators/login-validator';
 import { Button } from '@/components/ui/button';
 import {
   Card,
@@ -28,6 +23,11 @@ import {
   FormLabel,
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
+import { loginUser } from '@/services/login-services';
+import {
+  NewLoginFormSchema,
+  newLoginFormSchema,
+} from '@/validators/login-validator';
 
 export default function LoginForm() {
   const router = useRouter();

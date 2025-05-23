@@ -8,7 +8,7 @@ import { hashSync } from 'bcrypt-ts';
 import {
   newCadastroFormSchema,
   type NewCadastroFormSchema,
-} from '@/_validators/cadastro-validator';
+} from '@/validators/cadastro-validator';
 
 // valida no back-end o user cadastrado
 export async function cadastrarUser(data: NewCadastroFormSchema) {
