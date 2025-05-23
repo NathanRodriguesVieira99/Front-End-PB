@@ -2,48 +2,48 @@ import { Search } from 'lucide-react';
 
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
-import { HeaderButton } from '../HeaderButton';
+import { NavLink } from '../NavLink';
 import { SearchInput } from '../SearchInput';
 
 export const Nav = () => {
   return (
     <nav className="flex h-14 w-full items-center justify-between bg-store-dark px-2.5">
       <section className="flex">
-        <HeaderButton.Root className="rounded-sm bg-primary-light p-2 duration-300 ease-in hover:bg-secondary">
-          <HeaderButton.Content>
-            <HeaderButton.Text>Home</HeaderButton.Text>
-          </HeaderButton.Content>
-        </HeaderButton.Root>
+        <NavLink.Root className="rounded-sm bg-primary-light p-2 duration-300 ease-in hover:bg-secondary">
+          <NavLink.Content>
+            <NavLink.Text href="#">Home</NavLink.Text>
+          </NavLink.Content>
+        </NavLink.Root>
 
-        <HeaderButton.Root>
-          <HeaderButton.Content>
-            <HeaderButton.Text>Browse</HeaderButton.Text>
-          </HeaderButton.Content>
-        </HeaderButton.Root>
+        <NavLink.Root>
+          <NavLink.Content>
+            <NavLink.Text href="#">Browse</NavLink.Text>
+          </NavLink.Content>
+        </NavLink.Root>
 
-        <HeaderButton.Root>
-          <HeaderButton.Content>
-            <HeaderButton.Text>Points Shop</HeaderButton.Text>
-          </HeaderButton.Content>
-        </HeaderButton.Root>
+        <NavLink.Root>
+          <NavLink.Content>
+            <NavLink.Text href="#">Points Shop</NavLink.Text>
+          </NavLink.Content>
+        </NavLink.Root>
 
-        <HeaderButton.Root>
-          <HeaderButton.Content>
-            <HeaderButton.Text>Gift Cards</HeaderButton.Text>
-          </HeaderButton.Content>
-        </HeaderButton.Root>
+        <NavLink.Root>
+          <NavLink.Content>
+            <NavLink.Text href="#">Gift Cards</NavLink.Text>
+          </NavLink.Content>
+        </NavLink.Root>
 
-        <HeaderButton.Root>
-          <HeaderButton.Content>
-            <HeaderButton.Text>Curators</HeaderButton.Text>
-          </HeaderButton.Content>
-        </HeaderButton.Root>
+        <NavLink.Root>
+          <NavLink.Content>
+            <NavLink.Text href="#">Curators</NavLink.Text>
+          </NavLink.Content>
+        </NavLink.Root>
 
-        <HeaderButton.Root>
-          <HeaderButton.Content>
-            <HeaderButton.Text>News</HeaderButton.Text>
-          </HeaderButton.Content>
-        </HeaderButton.Root>
+        <NavLink.Root>
+          <NavLink.Content>
+            <NavLink.Text href="#">News</NavLink.Text>
+          </NavLink.Content>
+        </NavLink.Root>
       </section>
 
       <div className="mt-2.5">
@@ -63,17 +63,17 @@ export const Nav = () => {
       </div>
 
       <section className="flex">
-        <HeaderButton.Root className="cursor-pointer items-center justify-center">
-          <HeaderButton.Content>
-            <HeaderButton.Text>Wishlist</HeaderButton.Text>
-          </HeaderButton.Content>
-        </HeaderButton.Root>
+        <NavLink.Root className="cursor-pointer items-center justify-center">
+          <NavLink.Content>
+            <NavLink.Text href="#">Wishlist</NavLink.Text>
+          </NavLink.Content>
+        </NavLink.Root>
 
-        <HeaderButton.Root>
-          <HeaderButton.Content>
-            <HeaderButton.Text>Cart</HeaderButton.Text>
-          </HeaderButton.Content>
-        </HeaderButton.Root>
+        <NavLink.Root>
+          <NavLink.Content>
+            <NavLink.Text href="#">Cart</NavLink.Text>
+          </NavLink.Content>
+        </NavLink.Root>
       </section>
       <div className="mt-5 p-2.5">
         <Avatar className="h-14 w-14 cursor-pointer">

@@ -1,15 +1,15 @@
 import type { ComponentProps, ReactNode } from 'react';
 import { twMerge } from 'tailwind-merge';
 
-interface HeaderButtonRootProps extends ComponentProps<'div'> {
+interface NavLinkRootProps extends ComponentProps<'div'> {
   children: ReactNode;
 }
 
-export const HeaderButtonRoot = ({
+export const NavLinkRoot = ({
   children,
   className,
   ...props
-}: HeaderButtonRootProps) => {
+}: NavLinkRootProps) => {
   return (
     <div
       {...props}
