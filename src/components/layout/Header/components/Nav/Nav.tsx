@@ -7,7 +7,7 @@ import { SearchInput } from '../SearchInput';
 
 export const Nav = () => {
   return (
-    <nav className="flex h-14 w-full items-center justify-between bg-store-dark py-2.5">
+    <nav className="flex h-14 w-full items-center justify-between bg-store-dark px-2.5">
       <section className="flex">
         <HeaderButton.Root className="rounded-sm bg-primary-light p-2 duration-300 ease-in hover:bg-secondary">
           <HeaderButton.Content>
