@@ -14,7 +14,7 @@ export const HeaderButtonRoot = ({
     <div
       {...props}
       className={twMerge(
-        'mt-3 flex inline-flex h-[45] cursor-pointer items-center justify-start gap-2.5 text-base font-semibold text-text-main',
+        'mt-3 inline-flex h-[45] cursor-pointer items-center justify-start gap-2.5 text-base font-semibold text-text-main',
         className
       )}
     >
