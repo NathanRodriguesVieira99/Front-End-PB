@@ -11,10 +11,7 @@ export const SearchInputContent = ({
   ...props
 }: SearchInputContentProps) => {
   return (
-    <div
-      {...props}
-      className={twMerge('flex items-center justify-between', className)}
-    >
+    <div {...props} className={twMerge('flex h-11 items-center', className)}>
       {children}
     </div>
   );

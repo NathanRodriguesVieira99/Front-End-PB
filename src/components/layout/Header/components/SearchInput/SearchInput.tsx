@@ -21,7 +21,7 @@ export const SearchInput = ({
       id={name}
       placeholder={placeholder}
       className={twMerge(
-        'mr-40 h-11 w-[507px] rounded-[3px] bg-[#0E141B33] p-3.5 text-text-main placeholder-secondary outline-none',
+        'mr-40 w-[507px] rounded-[3px] bg-[#0E141B33] p-3.5 text-text-main placeholder-secondary outline-none',
         className
       )}
     />

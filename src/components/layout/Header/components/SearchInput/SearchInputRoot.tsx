@@ -11,7 +11,13 @@ export const SearchInputRoot = ({
   ...props
 }: SearchInputRootProps) => {
   return (
-    <div {...props} className={twMerge('', className)}>
+    <div
+      {...props}
+      className={twMerge(
+        'flex w-[507px] items-center justify-between',
+        className
+      )}
+    >
       {children}
     </div>
   );
