@@ -22,7 +22,7 @@ import { AppProvider } from '@/contexts/appProvider';
 // MSW
 if (process.env.NEXT_PUBLIC_API_MOCKING === 'enabled') {
   if (typeof window !== 'undefined') {
-    require('@/_api/msw/setup');
+    require('@/api/msw/setup/node');
   }
 }
 
