@@ -7,7 +7,7 @@ import { SearchInput } from '../SearchInput';
 
 export const Nav = () => {
   return (
-    <nav className="flex h-14 w-full items-center justify-around gap-2.5 space-x-3 bg-store-dark pl-2.5">
+    <nav className="flex h-14 w-full items-center justify-between bg-store-dark py-2.5">
       <section className="flex">
         <HeaderButton.Root className="rounded-sm bg-primary-light p-2 duration-300 ease-in hover:bg-secondary">
           <HeaderButton.Content>
@@ -46,7 +46,7 @@ export const Nav = () => {
         </HeaderButton.Root>
       </section>
 
-      <div className="flex w-full items-center justify-around">
+      <div className="mt-2.5">
         <SearchInput.Root>
           <SearchInput.Content>
             <SearchInput.Input
@@ -62,8 +62,8 @@ export const Nav = () => {
         </SearchInput.Root>
       </div>
 
-      <section className="ml-[-180px] flex w-full items-center">
-        <HeaderButton.Root className="">
+      <section className="flex">
+        <HeaderButton.Root className="cursor-pointer items-center justify-center">
           <HeaderButton.Content>
             <HeaderButton.Text>Wishlist</HeaderButton.Text>
           </HeaderButton.Content>
@@ -74,12 +74,13 @@ export const Nav = () => {
             <HeaderButton.Text>Cart</HeaderButton.Text>
           </HeaderButton.Content>
         </HeaderButton.Root>
-
-        <Avatar className="mt-5 ml-[50px] h-14 w-14 cursor-pointer">
+      </section>
+      <div className="mt-5 p-2.5">
+        <Avatar className="h-14 w-14 cursor-pointer">
           <AvatarFallback>NT</AvatarFallback>
           <AvatarImage src="https://github.com/shadcn.png" />
         </Avatar>
-      </section>
+      </div>
     </nav>
   );
 };
