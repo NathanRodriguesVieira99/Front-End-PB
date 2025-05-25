@@ -11,37 +11,49 @@ export const Nav = () => {
       <section className="flex">
         <NavLink.Root className="rounded-sm bg-primary-light p-2 duration-300 ease-in hover:bg-secondary">
           <NavLink.Content>
-            <NavLink.Text href="#">Home</NavLink.Text>
+            <NavLink.Text title="Home" href="#">
+              Home
+            </NavLink.Text>
           </NavLink.Content>
         </NavLink.Root>
 
         <NavLink.Root>
           <NavLink.Content>
-            <NavLink.Text href="#">Browse</NavLink.Text>
+            <NavLink.Text title="Browse" href="#">
+              Browse
+            </NavLink.Text>
           </NavLink.Content>
         </NavLink.Root>
 
         <NavLink.Root>
           <NavLink.Content>
-            <NavLink.Text href="#">Points Shop</NavLink.Text>
+            <NavLink.Text title="Points Shop" href="#">
+              Points Shop
+            </NavLink.Text>
           </NavLink.Content>
         </NavLink.Root>
 
         <NavLink.Root>
           <NavLink.Content>
-            <NavLink.Text href="#">Gift Cards</NavLink.Text>
+            <NavLink.Text title="Gift Cards" href="#">
+              Gift Cards
+            </NavLink.Text>
           </NavLink.Content>
         </NavLink.Root>
 
         <NavLink.Root>
           <NavLink.Content>
-            <NavLink.Text href="#">Curators</NavLink.Text>
+            <NavLink.Text title="Curators" href="#">
+              Curators
+            </NavLink.Text>
           </NavLink.Content>
         </NavLink.Root>
 
         <NavLink.Root>
           <NavLink.Content>
-            <NavLink.Text href="#">News</NavLink.Text>
+            <NavLink.Text title="News" href="#">
+              News
+            </NavLink.Text>
           </NavLink.Content>
         </NavLink.Root>
       </section>
@@ -65,13 +77,17 @@ export const Nav = () => {
       <section className="flex">
         <NavLink.Root className="cursor-pointer items-center justify-center">
           <NavLink.Content>
-            <NavLink.Text href="#">Wishlist</NavLink.Text>
+            <NavLink.Text title="WishList" href="#">
+              Wishlist
+            </NavLink.Text>
           </NavLink.Content>
         </NavLink.Root>
 
         <NavLink.Root>
           <NavLink.Content>
-            <NavLink.Text href="#">Cart</NavLink.Text>
+            <NavLink.Text title="Cart" href="#">
+              Cart
+            </NavLink.Text>
           </NavLink.Content>
         </NavLink.Root>
       </section>
@@ -79,7 +95,10 @@ export const Nav = () => {
       <div className="mt-5 p-2.5">
         <Avatar className="h-14 w-14 cursor-pointer">
           <AvatarFallback>NT</AvatarFallback>
-          <AvatarImage src="https://github.com/shadcn.png" />
+          <AvatarImage
+            src="https://github.com/shadcn.png"
+            alt="Imagem de perfil do usuário"
+          />
         </Avatar>
       </div>
     </nav>
