@@ -23,5 +23,3 @@ export const Card = {
   Footer: CardFooter,
   FooterItem: CardFooterItem,
 };
-
-// TODO adicionar tailwind merge em todos os subcomponentes de Card
