@@ -47,11 +47,13 @@ export function Footer() {
                     icon={FaLinkedin}
                     href={creator.linkedin}
                     target="_blank"
+                    title={`Perfil no ${creator.linkedin} de ${creator.name}`}
                   />
                   <FooterComponent.Icon
                     icon={FaGithub}
                     href={creator.github}
                     target="_blank"
+                    title={`Perfil no ${creator.github} de ${creator.name}`}
                   />
                 </FooterComponent.IconsContainer>
               </div>
