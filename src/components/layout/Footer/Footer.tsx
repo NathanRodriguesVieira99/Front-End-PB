@@ -1,9 +1,64 @@
 'use client';
 
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
+
+import { FooterComponent } from './components';
+
+const creators = [
+  {
+    id: 1,
+    name: 'Nathan Rodrigues',
+    linkedin: 'https://www.linkedin.com/in/nathan-rodrigues-vieira-207747252/',
+    github: 'https://github.com/NathanRodriguesVieira99',
+  },
+  {
+    id: 2,
+    name: 'Natan Robers',
+    linkedin: 'https://www.linkedin.com/in/natan-de-andrade-robers-6843652bb/',
+    github: 'https://github.com/NatanRobers',
+  },
+  {
+    id: 3,
+    name: 'Victor Hugo',
+    linkedin: 'https://www.linkedin.com/in/victor-moraes-026567213/',
+    github: 'https://github.com/victormoraes0',
+  },
+];
+
 export function Footer() {
   return (
-    <div className="bg-[var(--Background-Highlight,#1E2329)]">
-      <h1 className="text-text-main">FOOTER</h1>
-    </div>
+    <footer className="h-80 w-full bg-[var(--Background-Highlight,#1E2329)]">
+      <FooterComponent.Root>
+        <FooterComponent.Content>
+          <FooterComponent.Logo />
+          <FooterComponent.CopyrightText>
+            <p className="text-lg text-[#76808C]">
+              © اتّق دم البريء <br /> لا شيء مطلق، كل شيء ممكن <br /> اختبئ وسط
+              الزّحام <br /> نحن من ائتمنك، لا تخن من ائتمنك.
+            </p>
+          </FooterComponent.CopyrightText>
+
+          <FooterComponent.CreatorsList>
+            {creators.map((creator) => (
+              <div key={creator.id}>
+                <FooterComponent.Creators name={creator.name} />
+                <FooterComponent.IconsContainer>
+                  <FooterComponent.Icon
+                    icon={FaLinkedin}
+                    href={creator.linkedin}
+                    target="_blank"
+                  />
+                  <FooterComponent.Icon
+                    icon={FaGithub}
+                    href={creator.github}
+                    target="_blank"
+                  />
+                </FooterComponent.IconsContainer>
+              </div>
+            ))}
+          </FooterComponent.CreatorsList>
+        </FooterComponent.Content>
+      </FooterComponent.Root>
+    </footer>
   );
 }
