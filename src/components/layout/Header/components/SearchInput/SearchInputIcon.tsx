@@ -10,5 +10,5 @@ export const SearchInputIcon = ({
   icon: Icon,
   className,
 }: SearchInputIconProps) => {
-  return <Icon className={twMerge('"size-4 text-text-main"', className)} />;
+  return <Icon className={twMerge('size-4 text-text-main', className)} />;
 };
