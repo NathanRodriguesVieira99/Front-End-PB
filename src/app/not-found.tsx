@@ -1,6 +1,6 @@
 'use client';
 
-export default function NotFound() {
+export default function NotFoundPage() {
   return (
     <div className="flex flex-col items-center justify-center">
       <h1 className="mt-12 font-main text-heading-large text-accent-red">

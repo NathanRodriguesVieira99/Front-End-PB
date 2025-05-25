@@ -12,10 +12,10 @@ import { CarouselSize } from '@/components/Carousel';
 
 */
 
-export default function Home() {
+export default function HomePage() {
   return (
     <main className="h-screen bg-[linear-gradient(180deg,var(--color-store-dark)_0%,var(--color-store-darker)_80%)]">
-      <div className="flex items-center justify-center">
+      <div className="flex flex-col items-center justify-center">
         <CarouselSize />
       </div>
     </main>
