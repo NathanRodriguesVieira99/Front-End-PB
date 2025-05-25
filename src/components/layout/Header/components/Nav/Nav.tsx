@@ -75,6 +75,7 @@ export const Nav = () => {
           </NavLink.Content>
         </NavLink.Root>
       </section>
+
       <div className="mt-5 p-2.5">
         <Avatar className="h-14 w-14 cursor-pointer">
           <AvatarFallback>NT</AvatarFallback>
