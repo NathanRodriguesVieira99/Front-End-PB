@@ -1,0 +1,3 @@
+describe('<CardBuyButton/>', () => {
+  it('should ', () => {});
+});

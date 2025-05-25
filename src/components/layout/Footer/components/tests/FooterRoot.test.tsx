@@ -1,0 +1,3 @@
+describe('<FooterRoot/>', () => {
+  it('should ', () => {});
+});

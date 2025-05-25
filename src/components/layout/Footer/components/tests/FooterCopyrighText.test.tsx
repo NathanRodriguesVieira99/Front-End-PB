@@ -1,0 +1,3 @@
+describe('<FooterCopyrightText/>', () => {
+  it('should ', () => {});
+});

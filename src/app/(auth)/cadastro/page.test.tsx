@@ -1,0 +1,3 @@
+describe('<CadastroPage/>', () => {
+  it('should ', () => {});
+});

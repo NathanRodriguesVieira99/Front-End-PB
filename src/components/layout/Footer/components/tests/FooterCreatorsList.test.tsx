@@ -1,0 +1,3 @@
+describe('<FooterCreatorsList/>', () => {
+  it('should ', () => {});
+});

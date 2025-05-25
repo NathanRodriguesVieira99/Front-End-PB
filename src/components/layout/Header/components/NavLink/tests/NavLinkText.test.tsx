@@ -1,0 +1,3 @@
+describe('<NavLinkText/>', () => {
+  it('should ', () => {});
+});

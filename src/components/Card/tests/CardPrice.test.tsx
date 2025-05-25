@@ -1,0 +1,3 @@
+describe('<CardPrice/>', () => {
+  it('should ', () => {});
+});

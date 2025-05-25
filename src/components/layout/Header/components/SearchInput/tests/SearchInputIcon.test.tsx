@@ -1,0 +1,3 @@
+describe('<SearchInputIcon/>', () => {
+  it('should ', () => {});
+});

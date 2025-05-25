@@ -1,0 +1,3 @@
+describe('<CardFooterItem/>', () => {
+  it('should ', () => {});
+});

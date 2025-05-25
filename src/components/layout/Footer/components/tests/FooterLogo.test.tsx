@@ -1,0 +1,3 @@
+describe('<FooterLogo/>', () => {
+  it('should ', () => {});
+});

@@ -1,0 +1,3 @@
+describe('<FooterIconsContainer/>', () => {
+  it('should ', () => {});
+});
