@@ -1,6 +1,6 @@
 // import { motion } from 'motion/react';
 
-import { CarouselSize } from '@/components/Carousel/Carousel';
+import { CarouselSize } from '@/components/Carousel';
 
 //TODO adicionar animações com motion quando tudo estiver pronto nessa página
 /*  
