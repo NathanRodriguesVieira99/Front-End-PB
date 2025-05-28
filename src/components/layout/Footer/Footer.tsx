@@ -30,7 +30,12 @@ export function Footer() {
     <footer className="h-80 w-full bg-[var(--Background-Highlight,#1E2329)]">
       <FooterComponent.Root>
         <FooterComponent.Content>
-          <FooterComponent.Logo />
+          <FooterComponent.Logo
+            src="/images/logo_footer.png" // TODO adicionar logo real
+            alt="logo do site"
+            width={150}
+            height={150}
+          />
           <FooterComponent.CopyrightText>
             <p className="text-lg text-[#76808C]">
               © اتّق دم البريء <br /> لا شيء مطلق، كل شيء ممكن <br /> اختبئ وسط
