@@ -1,4 +1,6 @@
+'use client';
 import { Search } from 'lucide-react';
+import { motion } from 'motion/react';
 
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
@@ -7,7 +9,7 @@ import { SearchInput } from '../SearchInput';
 
 export const Nav = () => {
   return (
-    <nav className="flex h-14 w-full items-center justify-between bg-store-dark px-2.5">
+    <nav className="flex h-20 w-full items-center justify-between bg-store-darkest px-2.5">
       <section className="flex">
         <NavLink.Root className="rounded-sm bg-primary-light p-2 duration-300 ease-in hover:bg-secondary">
           <NavLink.Content>
@@ -92,7 +94,13 @@ export const Nav = () => {
         </NavLink.Root>
       </section>
 
-      <div className="mt-5 p-2.5">
+      <motion.div
+        initial={{ opacity: 0, x: -5 }}
+        animate={{ opacity: 1, x: 0 }}
+        exit={{ opacity: 0, x: -5 }}
+        transition={{ duration: 0.5 }}
+        className="mt-5 p-2.5"
+      >
         <Avatar className="h-14 w-14 cursor-pointer">
           <AvatarFallback>NT</AvatarFallback>
           <AvatarImage
@@ -100,7 +108,7 @@ export const Nav = () => {
             alt="Imagem de perfil do usuário"
           />
         </Avatar>
-      </div>
+      </motion.div>
     </nav>
   );
 };
