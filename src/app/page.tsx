@@ -6,7 +6,7 @@ export default function AuthRedirect() {
     <Suspense
       fallback={
         <div>
-          <p>loading...(provisório)</p>
+          <p className="text-2xl text-text-main">loading...</p>
         </div>
       }
     >
