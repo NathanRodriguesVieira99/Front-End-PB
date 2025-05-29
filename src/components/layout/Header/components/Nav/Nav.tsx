@@ -8,8 +8,9 @@ import { NavLink } from '../NavLink';
 import { SearchInput } from '../SearchInput';
 
 export const Nav = () => {
+  //  TODO  criar burger menu
   return (
-    <nav className="flex h-20 w-full items-center justify-between bg-store-darkest px-2.5">
+    <nav className="hidden h-20 w-full items-center justify-between bg-store-darkest px-2.5 lg:flex">
       <section className="flex">
         <NavLink.Root className="rounded-sm bg-primary-light p-2 duration-300 ease-in hover:bg-secondary">
           <NavLink.Content>
