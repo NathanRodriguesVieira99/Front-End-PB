@@ -16,68 +16,10 @@ import { api } from '@/lib/axios';
 import { CategoryTitle } from './components/CategoryTitle';
 
 export function CarouselSize() {
-  // Dados mockados para testes
-  const cards: IGames[] = [
-    {
-      id: 1,
-      image_url: '/ac_shadows.jpg',
-      name: 'Assassin´s Creed Shadows',
-      price: 49.99,
-      developer: 'Ubisoft',
-      release_date: '20/03/2025',
-      category: 'Releases',
-    },
-    {
-      id: 2,
-      image_url: '/cyberpunk.jpg',
-      name: 'Cyberpunk 2077',
-      price: 39.99,
-      developer: 'CD Project Red',
-      release_date: '20/12/2020',
-      category: 'Releases',
-    },
-    {
-      id: 3,
-      image_url: '/elden_ring.jpg',
-      name: 'Elden Ring',
-      price: 59.99,
-      developer: 'Miazaki',
-      release_date: '22/12/2022',
-      category: 'Releases',
-    },
-    {
-      id: 4,
-      image_url: '/god_of_war.jpg',
-      name: 'God of War Ragnarök',
-      price: 54.99,
-      developer: 'Santa Monica',
-      release_date: '21/12/2021',
-      category: 'Releases',
-    },
-    {
-      id: 5,
-      image_url: '/horizon.jpg',
-      name: 'Horizon Forbidden West',
-      price: 49.99,
-      developer: 'Sony',
-      release_date: '19/12/2019',
-      category: 'Releases',
-    },
-    {
-      id: 6,
-      image_url: '/tlou2.jpg',
-      name: 'The Last of Us Part II',
-      price: 44.99,
-      developer: 'Naughty Dog',
-      release_date: '20/12/2022',
-      category: 'Releases',
-    },
-  ];
-
   // LÓGICA DE FETCH dos games
   const fetchGames = async () => {
     try {
-      const response = await api.get<IGames[]>('API URL');
+      const response = await api.get<IGames[]>('game');
       return response.data;
     } catch (error) {
       throw new Error('Erro ao buscar os jogos');
@@ -106,25 +48,25 @@ export function CarouselSize() {
           <div>Carregando...</div>
         ) : (
           <CarouselContent className="flex w-full">
-            {cards.map((card: IGames) => (
+            {data?.map((game_data: IGames) => (
               <CarouselItem
-                key={card.id}
+                key={game_data.id}
                 className="m-4 md:basis-1/2 lg:basis-1/3"
               >
                 <Card.Root className="">
-                  <Card.Image alt={card.name} src={card.image_url} />
+                  <Card.Image alt={game_data.name} src={game_data.image_url} />
 
                   <Card.Header>
-                    <Card.Title title={card.name} />
+                    <Card.Title title={game_data.name} />
                   </Card.Header>
 
                   <Card.Content>
-                    <Card.Price price={card.price} />
+                    <Card.Price price={game_data.price} />
                   </Card.Content>
 
                   <Card.Footer>
-                    <Card.FooterItem text={card.developer} />
-                    <Card.FooterItem text={card.release_date} />
+                    <Card.FooterItem text={game_data.developer} />
+                    <Card.FooterItem text={game_data.release_date} />
                   </Card.Footer>
                 </Card.Root>
               </CarouselItem>
@@ -150,25 +92,25 @@ export function CarouselSize() {
           <div>Carregando...</div>
         ) : (
           <CarouselContent className="flex w-full">
-            {cards.map((card: IGames) => (
+            {data?.map((game_data: IGames) => (
               <CarouselItem
-                key={card.id}
+                key={game_data.id}
                 className="m-4 md:basis-1/2 lg:basis-1/3"
               >
                 <Card.Root className="">
-                  <Card.Image alt={card.name} src={card.image_url} />
+                  <Card.Image alt={game_data.name} src={game_data.image_url} />
 
                   <Card.Header>
-                    <Card.Title title={card.name} />
+                    <Card.Title title={game_data.name} />
                   </Card.Header>
 
                   <Card.Content>
-                    <Card.Price price={card.price} />
+                    <Card.Price price={game_data.price} />
                   </Card.Content>
 
                   <Card.Footer>
-                    <Card.FooterItem text={card.developer} />
-                    <Card.FooterItem text={card.release_date} />
+                    <Card.FooterItem text={game_data.developer} />
+                    <Card.FooterItem text={game_data.release_date} />
                   </Card.Footer>
                 </Card.Root>
               </CarouselItem>
@@ -194,25 +136,25 @@ export function CarouselSize() {
           <div>Carregando...</div>
         ) : (
           <CarouselContent className="flex w-full">
-            {cards.map((card: IGames) => (
+            {data?.map((game_data: IGames) => (
               <CarouselItem
-                key={card.id}
+                key={game_data.id}
                 className="m-4 md:basis-1/2 lg:basis-1/3"
               >
                 <Card.Root className="">
-                  <Card.Image alt={card.name} src={card.image_url} />
+                  <Card.Image alt={game_data.name} src={game_data.image_url} />
 
                   <Card.Header>
-                    <Card.Title title={card.name} />
+                    <Card.Title title={game_data.name} />
                   </Card.Header>
 
                   <Card.Content>
-                    <Card.Price price={card.price} />
+                    <Card.Price price={game_data.price} />
                   </Card.Content>
 
                   <Card.Footer>
-                    <Card.FooterItem text={card.developer} />
-                    <Card.FooterItem text={card.release_date} />
+                    <Card.FooterItem text={game_data.developer} />
+                    <Card.FooterItem text={game_data.release_date} />
                   </Card.Footer>
                 </Card.Root>
               </CarouselItem>
