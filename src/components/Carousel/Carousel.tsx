@@ -45,7 +45,7 @@ export function CarouselSize() {
       >
         <CategoryTitle>FPS</CategoryTitle>
         {isLoading ? (
-          <div>Carregando...</div>
+          <div className="text-center text-text-main">Carregando...</div>
         ) : (
           <CarouselContent className="flex w-full">
             {data
@@ -94,7 +94,7 @@ export function CarouselSize() {
       >
         <CategoryTitle>Open World</CategoryTitle>
         {isLoading ? (
-          <div>Carregando...</div>
+          <div className="text-text-main">Carregando...</div>
         ) : (
           <CarouselContent className="flex w-full">
             {data
@@ -145,7 +145,7 @@ export function CarouselSize() {
       >
         <CategoryTitle>RPG</CategoryTitle>
         {isLoading ? (
-          <div>Carregando...</div>
+          <div className="text-text-main">Carregando...</div>
         ) : (
           <CarouselContent className="flex w-full">
             {data
