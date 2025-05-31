@@ -14,7 +14,7 @@ export const CategoryTitle = ({
     <h2
       {...props}
       className={twMerge(
-        'justify-start text-lg font-bold text-text-main',
+        'justify-start text-lg font-bold text-text-main md:text-xl',
         className
       )}
     >
