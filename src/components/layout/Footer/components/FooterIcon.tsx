@@ -13,7 +13,7 @@ export const FooterIcon = ({
 }: FooterIconProps) => {
   return (
     <a {...props} className="">
-      <Icon className={twMerge('size-5 text-text-main', className)} />{' '}
+      <Icon className={twMerge('size-6 text-text-main', className)} />{' '}
     </a>
   );
 };

@@ -27,7 +27,7 @@ const creators = [
 
 export function Footer() {
   return (
-    <footer className="h-80 w-full bg-[var(--Background-Highlight,#1E2329)]">
+    <footer className="w-full bg-[var(--Background-Highlight,#1E2329)] md:h-80">
       <FooterComponent.Root>
         <FooterComponent.Content>
           <FooterComponent.Logo
@@ -37,7 +37,7 @@ export function Footer() {
             height={150}
           />
           <FooterComponent.CopyrightText>
-            <p className="text-lg text-[#76808C]">
+            <p className="text-2xl text-[#76808C] md:text-base">
               © اتّق دم البريء <br /> لا شيء مطلق، كل شيء ممكن <br /> اختبئ وسط
               الزّحام <br /> نحن من ائتمنك، لا تخن من ائتمنك.
             </p>

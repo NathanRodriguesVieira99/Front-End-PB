@@ -10,7 +10,7 @@ export const FooterCreators = ({
   className,
 }: FooterCreatorsListProps) => {
   return (
-    <ul className={twMerge('text-text-main', className)}>
+    <ul className={twMerge('text-xl text-text-main', className)}>
       <li className={twMerge('', className)}>{name}</li>
     </ul>
   );

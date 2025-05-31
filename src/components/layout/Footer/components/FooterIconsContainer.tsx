@@ -11,7 +11,7 @@ export const FooterIconsContainer = ({
   ...props
 }: FooterIconsContainerProps) => {
   return (
-    <div {...props} className={twMerge('flex flex-row gap-1.5', className)}>
+    <div {...props} className={twMerge('flex flex-row gap-2.5', className)}>
       {children}
     </div>
   );

@@ -12,7 +12,7 @@ export const FooterCopyrightText = ({
   return (
     <div
       className={twMerge(
-        'mt-2 justify-start text-base leading-6 font-normal text-slate-500',
+        'mt-2 justify-start leading-6 font-normal text-slate-500',
         className
       )}
     >

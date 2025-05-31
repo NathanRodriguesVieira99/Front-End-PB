@@ -14,7 +14,7 @@ export const FooterContent = ({
     <div
       {...props}
       className={twMerge(
-        'mt-12 flex flex-row items-center justify-start gap-48',
+        'mt-12 flex flex-col items-center justify-start gap-24 md:flex-row md:gap-48',
         className
       )}
     >

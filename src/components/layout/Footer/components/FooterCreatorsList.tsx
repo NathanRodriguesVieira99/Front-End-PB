@@ -11,7 +11,13 @@ export const FooterCreatorsList = ({
   ...props
 }: FooterCreatorsListProps) => {
   return (
-    <div {...props} className={twMerge('flex flex-col gap-1.5', className)}>
+    <div
+      {...props}
+      className={twMerge(
+        'mb-2 flex w-80 flex-row flex-wrap gap-2.5 md:flex-col md:gap-5',
+        className
+      )}
+    >
       {children}
     </div>
   );
