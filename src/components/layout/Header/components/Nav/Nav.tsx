@@ -9,6 +9,7 @@ import { SearchInput } from '../SearchInput';
 
 export const Nav = () => {
   //  TODO  criar burger menu
+  // TODO fazer responsivo
   return (
     <nav className="hidden h-20 w-full items-center justify-between bg-store-darkest px-2.5 lg:flex">
       <section className="flex">
