@@ -33,6 +33,56 @@ export function CarouselSize() {
 
   return (
     <>
+      {/* Carrousel dos jogos Pré Venda */}
+      <Carousel
+        opts={{
+          align: 'start',
+          loop: true,
+          dragFree: false,
+        }}
+        className="mt-32 w-[90%]"
+      >
+        <CategoryTitle>Mais Aguardados</CategoryTitle>
+        {isLoading ? (
+          <div className="text-text-main">Carregando...</div>
+        ) : (
+          <CarouselContent className="flex w-full">
+            {data
+              ?.filter(
+                (game_data: IGames) => game_data.category === 'Pre Order'
+              )
+              .map((game_data: IGames) => (
+                <CarouselItem
+                  key={game_data.id}
+                  className="m-4 md:basis-1/2 lg:basis-1/3"
+                >
+                  <Card.Root className="">
+                    <Card.Image
+                      alt={game_data.name}
+                      src={game_data.image_url}
+                    />
+
+                    <Card.Header>
+                      <Card.Title title={game_data.name} />
+                    </Card.Header>
+
+                    <Card.Content>
+                      <Card.Price price={game_data.price} />
+                    </Card.Content>
+
+                    <Card.Footer>
+                      <Card.FooterItem text={game_data.developer} />
+                      <Card.FooterItem text={game_data.release_date} />
+                    </Card.Footer>
+                  </Card.Root>
+                </CarouselItem>
+              ))}
+          </CarouselContent>
+        )}
+        <CarouselPrevious />
+        <CarouselNext />
+      </Carousel>
+
       {/* Carrousel dos jogos FPS */}
 
       <Carousel
@@ -41,11 +91,11 @@ export function CarouselSize() {
           loop: true,
           dragFree: false,
         }}
-        className="mt-44 w-[90%]"
+        className="mt-32 w-[90%]"
       >
         <CategoryTitle>FPS</CategoryTitle>
         {isLoading ? (
-          <div className="text-center text-text-main">Carregando...</div>
+          <div className="text-text-main">Carregando...</div>
         ) : (
           <CarouselContent className="flex w-full">
             {data
@@ -92,7 +142,7 @@ export function CarouselSize() {
         }}
         className="mt-32 w-[90%]"
       >
-        <CategoryTitle>Open World</CategoryTitle>
+        <CategoryTitle>Mundo Aberto</CategoryTitle>
         {isLoading ? (
           <div className="text-text-main">Carregando...</div>
         ) : (
