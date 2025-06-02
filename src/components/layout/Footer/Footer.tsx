@@ -31,7 +31,7 @@ export function Footer() {
       <FooterComponent.Root>
         <FooterComponent.Content>
           <FooterComponent.Logo
-            src="/images/logo_footer.png" // TODO adicionar logo real
+            src="/images/logo_footer.png"
             alt="logo do site"
             width={250}
             height={250}
