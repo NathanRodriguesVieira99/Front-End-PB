@@ -33,8 +33,8 @@ export function Footer() {
           <FooterComponent.Logo
             src="/images/logo_footer.png" // TODO adicionar logo real
             alt="logo do site"
-            width={150}
-            height={150}
+            width={250}
+            height={250}
           />
           <FooterComponent.CopyrightText>
             <p className="text-2xl text-[#76808C] md:text-base">
