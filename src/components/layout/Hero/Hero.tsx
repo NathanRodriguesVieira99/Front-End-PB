@@ -10,6 +10,7 @@ export const Hero = () => {
         height={623}
         width={1920}
         unoptimized={true}
+        loading="lazy"
       />
     </div>
   );
