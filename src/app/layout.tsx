@@ -19,13 +19,6 @@ const monaSans = Mona_Sans({
 // Providers
 import { AppProvider } from '@/contexts/appProvider';
 
-// MSW
-if (process.env.NEXT_PUBLIC_API_MOCKING === 'enabled') {
-  if (typeof window !== 'undefined') {
-    require('@/api/msw/setup/node');
-  }
-}
-
 // Root Layout
 export default function RootLayout({
   children,
