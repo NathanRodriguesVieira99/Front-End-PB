@@ -3,6 +3,7 @@
 import { useQuery } from '@tanstack/react-query';
 
 import { IGames } from '@/@types/IGames';
+import { fetchGames } from '@/api/get-games';
 import { Card } from '@/components/Card';
 import {
   Carousel,
@@ -11,21 +12,10 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
-import { api } from '@/lib/axios';
 
 import { CategoryTitle } from './components/CategoryTitle';
 
 export function CarouselSize() {
-  // LÓGICA DE FETCH dos games
-  const fetchGames = async () => {
-    try {
-      const response = await api.get<IGames[]>('game');
-      return response.data;
-    } catch (error) {
-      throw new Error('Erro ao buscar os jogos');
-    }
-  };
-
   const { data, isLoading } = useQuery({
     queryKey: ['games'],
     queryFn: fetchGames,
