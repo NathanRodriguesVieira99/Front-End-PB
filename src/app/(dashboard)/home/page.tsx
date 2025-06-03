@@ -6,8 +6,6 @@ import { Suspense } from 'react';
 import { CarouselSize } from '@/components/Carousel';
 import { Hero } from '@/components/layout/Hero';
 
-// TODO Card diferente entre a imagem do topo e os carrousels normais
-
 export default function HomePage() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-gray-950 via-slate-900 to-slate-800">
