@@ -1,3 +1,0 @@
-describe('<AuthRedirectPage/>', () => {
-  it('should ', () => {});
-});
