@@ -1,0 +1,3 @@
+describe('<CategoryTitle/>', () => {
+  it('should ', () => {});
+});
