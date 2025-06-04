@@ -5,5 +5,5 @@
 [x] - (opcional) Escrever testes com jest, rtl e msw
 [x] - Adicionar logo
 [x] - Escrever o README
-[] - Fazer merge na main
-[] - Deploy na Vercel
+[x] - Fazer merge na main
+[x] - Deploy na Vercel
