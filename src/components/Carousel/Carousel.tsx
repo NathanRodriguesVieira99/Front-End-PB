@@ -3,7 +3,7 @@
 import { useQuery } from '@tanstack/react-query';
 
 import { IGames } from '@/@types/IGames';
-import { fetchGames } from '@/api/get-games';
+import { useFetchGames } from '@/api/get-games';
 import { Card } from '@/components/Card';
 import {
   Carousel,
@@ -16,6 +16,8 @@ import {
 import { CategoryTitle } from './components/CategoryTitle';
 
 export function CarouselSize() {
+  // chama o custom hook para passar na queryFn
+  const fetchGames = useFetchGames();
   const { data, isLoading } = useQuery({
     queryKey: ['games'],
     queryFn: fetchGames,
