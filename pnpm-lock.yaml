@@ -175,7 +175,7 @@ importers:
         specifier: ^0.6.12
         version: 0.6.12(prettier@3.5.3)
       prisma:
-        specifier: ^6.8.2
+        specifier: ^6.9.0
         version: 6.9.0(typescript@5.8.3)
       ts-node:
         specifier: ^10.9.2

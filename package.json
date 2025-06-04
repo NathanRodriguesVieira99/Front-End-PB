@@ -76,7 +76,7 @@
     "prettier-plugin-packagejson": "^2.5.15",
     "prettier-plugin-prisma": "^5.0.0",
     "prettier-plugin-tailwindcss": "^0.6.12",
-    "prisma": "^6.8.2",
+    "prisma": "^6.9.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
   },
